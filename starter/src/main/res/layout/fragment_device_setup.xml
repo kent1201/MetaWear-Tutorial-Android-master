@@ -1,0 +1,245 @@
+<!--
+  ~ Copyright 2015 MbientLab Inc. All rights reserved.
+  ~
+  ~ IMPORTANT: Your use of this Software is limited to those specific rights
+  ~ granted under the terms of a software license agreement between the user who
+  ~ downloaded the software, his/her employer (which must be your employer) and
+  ~ MbientLab Inc, (the "License").  You may not use this Software unless you
+  ~ agree to abide by the terms of the License which can be found at
+  ~ www.mbientlab.com/terms . The License limits your use, and you acknowledge,
+  ~ that the  Software may not be modified, copied or distributed and can be used
+  ~ solely and exclusively in conjunction with a MbientLab Inc, product.  Other
+  ~ than for the foregoing purpose, you may not use, reproduce, copy, prepare
+  ~ derivative works of, modify, distribute, perform, display or sell this
+  ~ Software and/or its documentation for any purpose.
+  ~
+  ~ YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+  ~ PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  ~ INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+  ~ NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+  ~ MBIENTLAB OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT, NEGLIGENCE,
+  ~ STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+  ~ THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED
+  ~ TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST
+  ~ PROFITS OR LOST DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY,
+  ~ SERVICES, OR ANY CLAIMS BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY
+  ~ DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+  ~
+  ~ Should you have any questions regarding your right to use this Software,
+  ~ contact MbientLab Inc, at www.mbientlab.com.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.mbientlab.metawear.tutorial.starter.DeviceSetupActivityFragment"
+    tools:showIn="@layout/activity_device_setup">
+
+    <Switch
+        android:id="@+id/led_ctrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:checked="false"
+        android:text="LED" />
+
+
+    <TextView
+        android:id="@+id/acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="83dp"
+        android:layout_weight="1"
+        android:text="Accelerometer" />
+
+    <Button
+        android:id="@+id/acc_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/acc"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="-13dp"
+        android:layout_toEndOf="@+id/acc"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/acc_stop"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/acc_start"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="25dp"
+        android:layout_toEndOf="@+id/acc_start"
+        android:text="Stop" />
+
+    <TextView
+        android:id="@+id/gyr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="58dp"
+        android:text="Gyro" />
+
+    <Button
+        android:id="@+id/gyr_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_start"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="28dp"
+        android:layout_toEndOf="@+id/gyr"
+        android:text="START" />
+
+    <Button
+        android:id="@+id/gyr_stop"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_stop"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="25dp"
+        android:layout_toEndOf="@+id/gyr_start"
+        android:text="STOP" />
+
+    <TextView
+        android:id="@+id/qua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gyr"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="51dp"
+        android:text="Quaternion" />
+
+    <Button
+        android:id="@+id/qua_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gyr_start"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="27dp"
+        android:layout_toEndOf="@+id/qua"
+        android:text="START" />
+
+    <Button
+        android:id="@+id/qua_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gyr_stop"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="13dp"
+        android:layout_toEndOf="@+id/qua_start"
+        android:text="STOP" />
+
+    <TextView
+        android:id="@+id/eua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qua"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="56dp"
+        android:text="EulerAngles" />
+
+    <Button
+        android:id="@+id/eua_start"
+        android:layout_width="103dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/qua_start"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="38dp"
+        android:layout_toEndOf="@+id/eua"
+        android:text="START" />
+
+    <Button
+        android:id="@+id/eua_stop"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qua_stop"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="19dp"
+        android:layout_toEndOf="@+id/eua_start"
+        android:text="STOP" />
+
+    <TextView
+        android:id="@+id/linacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eua"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="56dp"
+        android:text="linearAcceleration" />
+
+    <Button
+        android:id="@+id/lina_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eua_start"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/linacc"
+        android:text="START" />
+
+    <Button
+        android:id="@+id/lina_stop"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eua_stop"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="24dp"
+        android:layout_toEndOf="@+id/lina_start"
+        android:text="STOP" />
+
+    <TextView
+        android:id="@+id/gra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linacc"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="53dp"
+        android:text="Gravity" />
+
+    <Button
+        android:id="@+id/gra_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lina_start"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/gra"
+        android:text="START" />
+
+    <Button
+        android:id="@+id/gra_stop"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lina_stop"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/gra_start"
+        android:text="STOP" />
+
+</RelativeLayout>
